@@ -26,4 +26,9 @@ for depth in data:
     windows.append(sum(window))
     window.pop(0)
 
+for w in windows:
+    if last is not None and w > last:
+        increased += 1
+    last = w
+
 print(increased)
